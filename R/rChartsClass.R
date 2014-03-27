@@ -77,7 +77,8 @@ rCharts = setRefClass('rCharts', list(params = 'list', lib = 'character',
       lib = LIB$name,
       container = container
     ))
-    writeLines(c(assetHTML, chartDiv, .self$html(params$dom)))
+    #writeLines(c(assetHTML, chartDiv, .self$html(params$dom)))
+    return(paste(assetHTML, chartDiv, .self$html(params$dom)))
   },
   render = function(chartId = NULL, cdn = F, static = T, standalone = F){
     params$dom <<- chartId %||% params$dom
